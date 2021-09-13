@@ -1,0 +1,310 @@
+/*screen*/
+
+
+
+/*Configuração padrão da página*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.content{
+    color: rgb(43, 43, 43);
+    text-align: center;
+    padding: 50px 160px;
+}
+
+#footer{
+    color: rgb(43, 43, 43);
+    padding: 10px 20px;
+    display: flex;
+}
+
+h3{
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+.view-button{
+    text-decoration: none;
+}
+
+
+/*Efeito Parallax*/
+@media screen and (min-width: 320px){
+    .box1{
+        position: relative;
+        height: 100%;
+        background-color: #111;
+    }
+
+    .box2, .box3, .box4{
+        position: relative;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.85;
+        filter: brightness(95%);
+    }
+}
+
+@media screen and (min-width: 1150px){    
+    .box1{
+        position: relative;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .box2, .box3, .box4{
+        position: relative;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.85;
+        filter: brightness(90%);
+    }
+
+    .box1{
+        background-image: url(../images/BackgroundBox1.png);
+    }
+
+    .box2{
+        background-image: url(../images/BackgroundBox2.png);
+    }
+
+    .box3{
+        background-image: url(../images/BackgroundBox3.png);
+    }
+
+    .box4{
+        background-image: url(../images/BackgroundBox4.png);
+    }
+
+    .title-content{
+        position: absolute;
+        left: 0;
+        top: 45%;
+        width: 100%;  
+        text-align: center; 
+    }
+
+    .title-content span.title{
+        padding: 20px 30px 20px 30px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 5%;
+        background: #554a4a;
+        background-image: linear-gradient(to bottom, #979595,  #554a4a, rgb(0, 0, 0));
+        transition-property: padding, font-size;
+        transition-duration: 1.5s, 1.5s;
+    }
+
+    .title-content span.title:hover{
+        background: #5ea3b8;
+        background-image: linear-gradient(to bottom, #5ea3b8, rgb(0, 0, 0));
+        padding: 20px 10px 20px 10px;
+        font-size: 30px;
+    }
+}
+
+/*Header*/
+@media screen and (min-width: 320px){
+    #header{
+        position: relative;
+        height: 100%;
+        margin: 0% 5% 0% 22%;
+    }
+
+    #header .picture{
+        position: absolute;
+        right:  100%;
+        width: 80px;
+        margin-left: 0px;
+        border-right: 4px solid rgb(46, 22, 9);
+        border-bottom: 4px solid rgb(46, 22, 9);
+    }
+}
+
+@media screen and (min-width: 1150px){
+    #header{
+        position: relative;
+        height: 220px;
+        margin: 0% 17% 0 22%;
+        background-color: rgb(14, 13, 13);
+        background-image: linear-gradient(to bottom, rgb(14, 13, 13), black, black, rgb(14, 13, 13));
+        border: 6px solid rgb(46, 22, 9);
+    }
+
+    #header .picture{
+        position: absolute;
+        right: 100%;
+        height: 220px;
+        width: 108px;
+        margin-left: 0px;
+        border-right: 6px solid rgb(46, 22, 9);
+        border-bottom: 6px solid rgb(46, 22, 9);
+    }
+}
+
+/*navigation*/
+.navigation-content{
+    position: absolute;
+    width: 100%;   
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+#header ul{
+    margin-top: 30px;
+}
+
+#header ul li{
+    display: inline;
+    padding: 30px;
+}
+
+#header ul a{
+    padding: 15px 20px 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5%;
+}
+
+#header ul a{
+    color: #fff;
+    background: #554a4a;
+    background-image: linear-gradient(to bottom, #979595,  #554a4a, rgb(0, 0, 0));
+    transition-property: border-radius, padding;
+    transition-duration: 1.5s, 1.5s;
+}
+
+#header ul a:hover{
+    background: #4b7f8f;
+    background-image: linear-gradient(to bottom, #5ea3b8,  #4b7f8f, rgb(0, 0, 0));
+    padding: 15px 10px 15px 10px;
+    border-radius: 30%;
+}
+
+/*About me*/
+@media screen and (min-width: 1150px){
+    .about-me{
+        display: block;
+        width: 110px;
+        margin: 95px 0px 0px 15px;
+        color: rgb(212, 212, 212);
+        text-decoration: underline;
+    }
+}
+    #text-about-me{
+        visibility: hidden;
+    }
+
+    .text-about-me p{
+        margin: 10px 0px 0px 30px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .animation-paragraph1{
+        animation: blinkCursor 0.5s steps(40) 0.2s 9 normal, typing 5s steps(50, end) 1s normal both;
+    }
+
+    .animation-paragraph2{
+        animation: blinkCursor 0.5s steps(40) 6s 7 normal, typing 5s steps(50, end) 6s normal both;
+    }	
+
+    .animation-paragraph3{
+        animation: blinkCursor 0.5s steps(40) 10s 4 normal, typing 5s steps(50, end) 10s normal both;
+    }
+	
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 94%;
+    }
+}
+
+@keyframes blinkCursor{
+    from{
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
+    }
+    to{
+        border: none;
+    }
+}
+
+
+/*Info bar*/
+.content{
+    background: rgb(106, 160, 170);
+    background-image: linear-gradient(to right, rgb(38, 36, 68) 0%, rgb(106, 160, 170) 28%, rgb(115, 196, 193) 45%, rgb(50, 207, 238) 100%);
+}
+
+/*footer*/
+#footer{
+    text-align: center;
+    color: aliceblue;
+    background: rgb(38, 36, 68);
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 5%, rgb(47, 94, 102) 50%, rgb(42, 61, 65) 95%);
+}
+
+#footer .footer-content1{
+    width: 70px;
+    margin-left: 35%;
+    height: 74px;
+}
+
+#footer .footer-content2{
+    width: 70px;
+    margin-left: 2%;
+    height: 74px;
+}
+
+#footer .footer-content1:hover,
+#footer .footer-content2:hover{
+    background-color: rgb(81, 119, 128);
+}
+
+#footer .footer-content1 .logo1{
+    width: 70px;
+}
+
+#footer .footer-content2 .logo2{
+    width: 65px;
+    margin-top: 5%;
+}
+
+#footer .copy{
+    font-size: 12px;
+    width: 100px;
+    margin-top: 60px;
+}
