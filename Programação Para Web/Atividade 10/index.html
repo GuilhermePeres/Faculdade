@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade10</title>
+</head>
+
+<body>
+    <img src="images/JanelaAberta.jpg" alt="Imagem1" id="imagem1" onmouseover="mudaImagem(1)" onmouseout="mudaImagem(2)"
+        onclick="mudaImagem(3)">
+
+
+    <script>
+        function mudaImagem(x) {
+            if (x == 1) {
+                document.getElementById("imagem1").src = "images/JanelaAberta.jpg";
+            }
+            else if (x == 2) {
+                document.getElementById("imagem1").src = "images/JanelaFechada.jpg";
+            }
+            else if (x == 3) {
+                document.getElementById("imagem1").src = "images/JanelaQuebrada.jpg";
+            }
+        }
+    </script>
+</body>
+
+</html>

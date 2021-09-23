@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 3</title>
+
+    <script>
+        function validarDados() {
+            if (document.forms.formulario1.elements["idNome"].value.length < 9) {
+                alert("Nome não pode ter menos de 10 caracteres!");
+                document.forms.formulario1.elements[0].focus();
+                return false;
+            };
+
+            if (document.forms.formulario1.elements["idEmail"].value.indexOf('@') == -1 || document.forms.formulario1.elements["idEmail"].value.indexOf('.') == -1) {
+                alert("Preencha campo E-MAIL corretamente!");
+                document.forms.formulario1.elements.idEmail.focus();
+                return false;
+            }
+
+            if (document.forms.formulario1.elements.idMensagem.value.length < 20) {
+                alert("É necessario preencher o campo MENSAGEM com mais de 20 caracteres!");
+                document.getElementById("idMensagem").focus();
+                return false;
+            }
+
+            if (document.forms.formulario1.elements["tipo"].value == 1) {
+                alert("Que bom que você voltou a visitar essa página!");
+            } else {
+                alert("Volte sempre a essa página!");
+            }
+
+            return true;
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <form action="" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
+
+        <div id="principal" width=200 heigth=200 align=center>
+            Nome Completo:
+            <input name="idNome" type="text" id="idNome" size="52" maxlength="150">
+            <br>
+            <br> E-Mail :
+            <input name="idEmail" type="email" id="idEmail" size="52" maxlength="150">
+            <br>
+            <br> Comentário :
+            <textarea name="idMensagem" cols="50" rows="8" id="idMensagem" value="" input></textarea>
+            <br>
+            <br>
+            <strong>Pesquisa</strong>
+            <br><br>
+            <em>Primeira vez nessa página?</em>
+            <br><br>
+            Sim
+            <input type="radio" name="tipo" value="1" onclick="formatElement();">
+            Não:
+            <input type="radio" name="tipo" value="2" onclick="formatElement();">
+            <br>
+            <br>
+            <br>
+            <input name="Submit" type="submit" form="formulario1" value="Enviar">
+            <input name="Reset" type="reset" form="formulario1" value="Redefinir">
+        </div>
+    </form>
+</body>
+
+</html>

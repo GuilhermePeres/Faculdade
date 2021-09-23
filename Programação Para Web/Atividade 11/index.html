@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade 11</title>
+
+    <script type="text/javascript">
+
+        function formatElement() {
+            if (document.forms.formulario1.elements["formatacao"].value == 1) {
+                document.getElementById("texto").value = document.getElementById("texto").value.toUpperCase();
+            } else {
+                document.getElementById("texto").value = document.getElementById("texto").value.toLowerCase();
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <form action="teste" method="POST" name="formulario1" id="formulario1">
+
+        <div id="principal" width=150 heigth=150 align=center>
+            Digite o texto:
+            <input name="texto" type="text" id="texto" size="50" maxlength="100">
+            <br>
+            <br>
+            Maíusculo:
+            <input type="radio" name="formatacao" value="1" onclick="formatElement();">
+            Minúsculo:
+            <input type="radio" name="formatacao" value="2" onclick="formatElement();">
+        </div>
+
+    </form>
+</body>
+
+</html>
